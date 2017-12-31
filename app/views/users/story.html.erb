@@ -1,0 +1,59 @@
+<% provide(:title, "Our Story") %>
+<h1 class="gold2">Our Story</h1>
+<div>
+<main class="page-content">
+    <article class="post">
+<!--
+      <h1>Article Layout with Varying Content Width Using CSS Grid</h1>
+-->
+      <p>
+        Hello, and welcome, to the world of Daniel Kraken! A proud purveyor
+        of sublime ales and spirits since mankind crawled onto the mainland from
+        the cold and uncaring Hypersea, Daniel Kraken's rich history
+        is woven into the very psychic fabric of his esteemed clientele.
+      </p>
+      <p>
+        Any company worth its salt
+        realizes that its past and future depend upon its valued customers. And
+        just as you're thirsty for the story of Daniel Kraken, Daniel Kraken
+        is parched for information about you!
+      </p>
+      <p>
+        If you'd be so kind, please select a first name and a last name
+        for your character. Before you slake your thirst for story in the
+        land of Daniel Kraken, let us take a wee dram of you:
+      </p>
+    </div>
+      <% provide(:button_text, 'Save changes') %>
+      <h1 class="gold2">Choose Your Name</h1>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= render 'form_character_name' %>
+        </div>
+      </div>
+      <div>
+      <main class="page-content">
+          <article class="post">
+      <p class="has-side-note">
+      Aha! Thank you! Now the narrative can proceed. If you'd like, you can
+      change or update your character name at any time in your <%= link_to "User Profile", edit_user_path(current_user) %>.
+      </p>
+
+      <p class="side-note">"Ugh. These people and their precious names"--Daniel Kraken</p>
+      <p>
+        With your name selected, let's get the prologue squared away before
+        diving into the story.
+      </p>
+    </article>
+    </div>
+
+</main>
+</body>
+<div class="wrapper">
+  <h1 class="square2">
+    <a2 class="before after gold2">
+    <%= link_to "Prologue", prologue_path(current_user) %>
+    </a2>
+  </h1>
+</div>
+</html>

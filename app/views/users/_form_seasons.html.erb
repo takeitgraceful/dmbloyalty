@@ -1,0 +1,46 @@
+<%= form_for(@user= current_user) do |f| %>
+  <%= render 'shared/error_messages', object: @user %>
+
+  <%= f.label :characterfirstname,"Select the Season" %>
+  <div class="fontcolor-black">
+  <%= f.select :characterseason, [
+    'STERLING',
+    'SAFFRON',
+    'RAM',
+    'ENTICER',
+    'SLATE',
+    'BUTTERSCOTCH',
+    'ROUSTABOUT',
+    'NAÏF',
+    'PURE ABJECT TERROR',
+    'OH HEAVENS',
+    'NEOPHYTE',
+    'ICONOCLAST',
+    'PETULANCE',
+    'NITPICKER',
+    'SHATTER',
+    'BACCHANAL BLANC',
+    'CLOVER',
+    'DOTARD',
+    'FANG',
+    'HONEYSUCKLE',
+    'BRIDLE',
+    'SPITTOON',
+    'FALSE WITNESS',
+    'WOOLPULLER',
+    'TORRENT',
+    'AB CHALLENGE',
+    'MIDWIFE',
+    'GOLIATH',
+    'WHISTLE',
+    'THIEF',
+    'BABEL',
+    'ENDURE',
+    'CARAMEL',
+    'LAMPLIGHTER',
+    'BANNERMAN',
+    'BACCHANAL ROUGE' ]%>
+</div>
+
+  <%= f.submit yield(:button_text), class: "btn-lg gold3 white3" %>
+<% end %>
