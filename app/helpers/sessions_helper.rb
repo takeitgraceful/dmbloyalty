@@ -4,7 +4,7 @@ module SessionsHelper
 
   def require_login
     unless logged_in?
-      flash[:info] = "Please log in to access the world of Daniel Kraken!"
+      flash[:info] = "Please log in to access your DMB Loyalty Account!"
       redirect_to login_url # halts request cycle
     end
   end
