@@ -1,11 +1,10 @@
-<h1 class="gold2">Welcome</h1>
+<h1>Welcome</h1>
 
-<div class= "logo-center">
-  <%= img src=("http://iwillnottakethisgracefully.com/images/logo-white.svg") %>
-  <p>Hi <%= @user.name %>,</p>
-  <p>
-  Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
-  </p>
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
-</div>
