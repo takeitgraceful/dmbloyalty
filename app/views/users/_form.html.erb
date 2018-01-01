@@ -13,11 +13,16 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-  <%= f.label :characterfirstname,"First Name (limit 12 characters)" %>
-  <%= f.text_field :characterfirstname, :maxlength => 12, class: 'form-control' %>
+  <%= f.label :card_number %>
+  <%= f.text_field :card_number, class: 'form-control' %>
 
-  <%= f.label :characterlastname,"Last Name (limit 12 characters)" %>
-  <%= f.text_field :characterlastname, :maxlength => 12, class: 'form-control' %>
+  <%= f.label :team_name,"Whose side are you on?" %>
+  <br>
+  <%= label :team_name, 'VICE' %>
+  <%= f.radio_button :team_name, value: "VICE", checked:true %> <br />
+  <%= label :team_name, 'PINNACLE' %>
+  <%= f.radio_button :team_name, value: "PINNACLE" %> <br />
+  <br>
 
   <%= f.submit yield(:button_text), class: "btn-lg gold3 white3" %>
 <% end %>

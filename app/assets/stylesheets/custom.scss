@@ -218,7 +218,7 @@ color: black;
 }
 
 .top-spacer {
-  margin-top: 2em;
+  margin-top: 5em;
 }
 
 body {
@@ -231,11 +231,8 @@ body {
 
 
 .gold2{
-background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-            radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-top:50px;
+           font-color:white;
+            margin-top:1em;
             margin-bottom:30px;
             line-height: normal;
 
@@ -244,12 +241,11 @@ background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%,
 }
 
 .gold3{
-background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-            radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+background: #002454;
 }
 
 .gold3:hover{
-  background:black;
+  background:#D74024;
 }
 
 .white3{

@@ -9,6 +9,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  validates :card_number, presence:true
+
 
 
   # Returns the hash digest of the given string.
@@ -85,7 +87,7 @@ end
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
-  
+
 
 
 end
