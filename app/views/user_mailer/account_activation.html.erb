@@ -1,10 +1,11 @@
-<h1>Welcome</h1>
+<h1 class="gold2">Welcome</h1>
 
-<p>Hi <%= @user.name %>,</p>
-
-<p>
-Welcome to the Kraken Estates! Click on the link below to activate your account:
-</p>
-
+<div class= "logo-center">
+  <%= link_to image_tag("http://iwillnottakethisgracefully.com/images/logo-white.svg"), signup_path %>
+  <p>Hi <%= @user.name %>,</p>
+  <p>
+  Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+  </p>
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
+</div>
