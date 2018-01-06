@@ -9,8 +9,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
-  validates :card_number, presence:true
-
+  validates :card_number, presence:true, uniqueness:true
+  validates_presence_of :team_name
 
 
   # Returns the hash digest of the given string.
