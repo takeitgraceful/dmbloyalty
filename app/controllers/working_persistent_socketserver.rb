@@ -1,6 +1,6 @@
 require 'socket'
 
-server = TCPServer.new 3000
+server = TCPServer.new 4444
 loop do
   Thread.start(server.accept) do |client|
     while line = client.gets

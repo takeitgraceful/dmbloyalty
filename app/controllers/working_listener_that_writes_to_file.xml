@@ -10,7 +10,7 @@ loop do
   Thread.start(server.accept) do |client|
     while line = client.gets
       # open and write to a file with ruby
-      open('dmbloyalty.html', 'a+') { |f|
+      open('loyalty.xml', 'a+') { |f|
         f.puts line
       }
     end
