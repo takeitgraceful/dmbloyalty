@@ -6,8 +6,6 @@ server = TCPServer.new 4444
 html        = File.open("dmbloyalty.html")
 parsed_data = Nokogiri::HTML.parse(html)
 lines = File.open("parseddmbloyalty.html").to_a
-unique_data = parsed_data.xpath("//*[@state='Paid']/@manager_uid")
-
 loop do
   Thread.start(server.accept) do |client|
     while line = client.gets
@@ -15,10 +13,10 @@ loop do
       open('dmbloyalty.html', 'a+') { |f|
         f.puts line
       }
-      open('parseddmbloyalty.html', 'w') { |f|
-        f.puts unique_data
-      }
     end
   client.close
 end
+#open('parseddmbloyalty.html', 'w') { |f|
+#  f.puts parsed_data.xpath("//*[@state='Paid']/@manager_uid")
+#}
 end
