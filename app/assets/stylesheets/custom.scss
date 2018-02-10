@@ -258,15 +258,15 @@ color: white;
   margin-bottom: 3vw;
 }
 
+.coffees {
+  /* The image used */
+background-image: url("http://iwillnottakethisgracefully.com/images/coffees.jpg");
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+/* Full height */
+height: 100%;
 
-.logo-center {
-margin: 0 auto;
-height: 0;
-width: 15em;
-margin-top:0em;
-text-align:center;
-font-size:2em;
-
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
