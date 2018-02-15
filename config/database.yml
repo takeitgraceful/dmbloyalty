@@ -11,7 +11,7 @@ test:
   timeout: 5000
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  database: salty-reaches-15835_production
-  username: salty-reaches-15835
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: my_database_production
+  pool: 5
+  timeout: 5000

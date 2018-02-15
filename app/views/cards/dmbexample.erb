@@ -1,5 +1,5 @@
 <%
-conn = PG.connect( dbname: 'my_database_production' )
+conn = PG.connect(ENV['DATABASE_URL'])
 pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
 @pinnacleresult = pinnacle.getvalue(0,0)
 vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
