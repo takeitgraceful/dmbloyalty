@@ -4,7 +4,7 @@ require 'pg'
 require 'active_support'
 require 'active_support/core_ext'
 
-conn = PG.connect( dbname: 'my_database_production' )
+conn = PG.connect( dbname: 'd3qqj15huqvp3l' )
 
 open("dmbloyalty.html") do |file|
   file.seek(0, IO::SEEK_END) # rewinds file to the end
