@@ -4,7 +4,7 @@ require 'pg'
 require 'active_support'
 require 'active_support/core_ext'
 
-conn = PG.connect(ENV['DATABASE_URL']) 
+DB = PG.connect(ENV['DATABASE_URL'])
 
 open("dmbloyalty.html") do |file|
   file.seek(0, IO::SEEK_END) # rewinds file to the end
@@ -19,7 +19,7 @@ open("dmbloyalty.html") do |file|
       print unique_data
     end
     if unique_data.present?
-      conn.exec("INSERT INTO cards(card_used,created_at,updated_at) VALUES (#{@card_test},NOW(),NOW());")
+      DB.exec("INSERT INTO cards(card_used,created_at,updated_at) VALUES (#{@card_test},NOW(),NOW());")
     end
     sleep 1.0        # sleep for a second; without it script would use 100% of processor
   end
