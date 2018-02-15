@@ -17378,3 +17378,121 @@ ActionView::Template::Error (FATAL:  database "my_database_production" does not 
     5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
   
 app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___958069869412232480_70135223801900'
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-15 02:27:33 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (8.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (FATAL:  database "jacobmcmaster-bigum" does not exist
+):
+    1: <%
+    2: conn = PG.connect(ENV['DATABASE_URL'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__692314875106908224_70270874337300'
+Started GET "/" for 127.0.0.1 at 2018-02-15 02:28:15 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (7.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 533ms (Views: 523.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-15 02:28:17 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-15 02:28:19 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 108ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-15 02:28:20 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (36.6ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 116ms (Views: 112.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-15 02:28:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fb+BKRQr16Kcmo+QMToWuQv1nvZ3OBMcafvXSoKKxN5iKA50PG6De6yY9E9X+G8oPezkBTy6dNq+spAYTG9Ieg==", "session"=>{"email"=>"mcmasterbigumjacob@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mcmasterbigumjacob@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 96ms (Views: 46.8ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-15 02:28:27 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (3.5ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-15 02:28:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 422ms (Views: 419.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-15 02:28:51 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-15 02:28:58 -0500
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (28.6ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (FATAL:  database "jacobmcmaster-bigum" does not exist
+):
+    1: <%
+    2: conn = PG.connect(ENV['DATABASE_URL'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__692314875106908224_70270874828700'
