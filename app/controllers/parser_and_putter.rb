@@ -4,7 +4,7 @@ require 'pg'
 require 'active_support'
 require 'active_support/core_ext'
 
-conn = PG.connect( dbname: 'postgres://mhadypdwstvnpg:2159a28f43687be11c4e17b674b3871dc530e95f45eebc578f6c057c3be5fbdd@ec2-54-235-244-185.compute-1.amazonaws.com:5432/d3qqj15huqvp3l' )
+conn = Sequel.connect(ENV['DATABASE_URL']) 
 
 open("dmbloyalty.html") do |file|
   file.seek(0, IO::SEEK_END) # rewinds file to the end
