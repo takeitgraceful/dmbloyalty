@@ -17496,3 +17496,21 @@ ActionView::Template::Error (FATAL:  database "jacobmcmaster-bigum" does not exi
     5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
   
 app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__692314875106908224_70270874828700'
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-15 02:41:03 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (15.7ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (FATAL:  database "jacobmcmaster-bigum" does not exist
+):
+    1: <%
+    2: conn = PG.connect(ENV['DATABASE_URL'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___404424255428993207_70232615387060'
