@@ -4,14 +4,6 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
   before_action :listener
 
-  def listener
-  load('socketserver.rb')
-  end
-
-  def parser
-  load('parser_and_putter.rb')
-  end
-
   def spirits
   end
 
