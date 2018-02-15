@@ -16501,3 +16501,43 @@ Processing by CardsController#dmbexample as HTML
 Completed 200 OK in 489ms (Views: 480.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-14 23:23:44 -0500
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/application
+  Rendered cards/dmbexample.erb within layouts/application (9.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 542ms (Views: 531.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-14 23:23:47 -0500
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/application
+  Rendered cards/dmbexample.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-14 23:24:10 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (9.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 565ms (Views: 555.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 127.0.0.1 at 2018-02-14 23:25:49 -0500
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (30.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+

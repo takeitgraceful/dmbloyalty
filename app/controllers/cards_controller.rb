@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-#  layout "admin"
+  layout "admin"
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
   # GET /cards
