@@ -1,4 +1,31 @@
 class User < ApplicationRecord
+  has_one   :name
+  has_one   :email
+  has_one   :created_at
+  has_one   :updated_at
+  has_one   :remember_digest
+  has_one   :email
+  has_one   :admin
+  has_one   :activation_digest
+  has_one   :activated
+  has_one   :activated_at
+  has_one   :reset_digest
+  has_one   :reset_sent_at
+  has_one   :characterfirstname
+  has_one   :characterlastname
+  has_one   :card_number
+  has_one   :team_name
+
+
+
+
+
+
+
+
+
+
+
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
