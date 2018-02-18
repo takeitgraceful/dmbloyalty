@@ -18533,3 +18533,2005 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 106ms (Views: 90.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:47:42 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['DATA_DB_URL'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__3524020980316609282_28153680'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:48:29 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['my_database_development'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___3898175726088318846_43163440'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:49:58 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (6.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['my_database_development'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__2974434569941481441_35637800'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:52:04 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['gonano'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___3582881592316528176_30659340'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:52:46 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (3.4ms)
+  Rendered layouts/_shim.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 859ms (Views: 850.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:53:14 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (1.5ms)
+  Rendered layouts/_shim.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 814ms (Views: 802.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:53:18 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (1.3ms)
+  Rendered layouts/_shim.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 172ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:53:20 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (1.1ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 117ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:55:52 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['gonano'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__3967886114825211843_41015780'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:57:56 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['my_database_development'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__2100309473541649222_38953500'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:59:28 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG::Connection.open(:dbname => 'my_database_development')
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `initialize'
+app/views/cards/dmbexample.erb:2:in `new'
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__1509461092809782007_29267840'
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:02:47 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 986ms (Views: 983.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:02:52 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 177ms (Views: 171.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 05:02:53 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GPmqb26A53qHFckYi3wv8NCGVZV170e+azgHcS9LF8vB/xFSU5Cfbawq94lT8fQfRDSopWj/UfgwtyTA3GqV/w==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 166ms (Views: 120.5ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 05:02:56 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `listener' for #<UsersController:0x00007fd7cc2ec100>):
+  
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:198:in `block in halting'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:20:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:03:20 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:03:23 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 84ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:03:25 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 169ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 05:03:27 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uIpAPLedkzhg3NSUlqWQ+plmncYcB7aeJkd4/i1Mz0phjPsBio3rL0vj6gVOKEsVDdRg9gEXoNh9yFtP3m1Nfg==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 113ms (Views: 109.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/password_resets/new" for 172.21.255.254 at 2018-02-18 05:03:30 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 125ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:03:37 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 107ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:03:38 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 05:03:40 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `listener' for #<UsersController:0x00007fd7cc4dc870>):
+  
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:198:in `block in halting'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:20:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:03:54 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 186ms (Views: 183.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 05:04:00 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `listener' for #<UsersController:0x00007fd7c8cdfb70>):
+  
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:198:in `block in halting'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:20:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:04:03 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 102ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:04:05 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:06:10 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (32.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (4.3ms)
+Completed 200 OK in 982ms (Views: 968.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:06:12 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 216ms (Views: 192.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:06:13 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 174ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 05:06:15 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form_new.html.erb (102.6ms)
+  Rendered users/new.html.erb within layouts/application (117.1ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (3.9ms)
+Completed 200 OK in 299ms (Views: 227.2ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/users" for 172.21.255.254 at 2018-02-18 05:06:46 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XXML58xJi2jxyHyyRvrSdHGn7pljjjDdBJGpcbH5wK8B0V6NlQuA1o55L3cOvHdvXLEL9sagH39GuYrGJbc4A==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "card_number"=>""}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (4.7ms)
+  Rendered users/_form_new.html.erb (10.9ms)
+  Rendered users/new.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 163ms (Views: 131.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:06:50 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 121ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 05:06:51 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form_new.html.erb (7.3ms)
+  Rendered users/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 109ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:06:53 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 158ms (Views: 153.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:06:53 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 100ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 05:06:55 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (2.3ms)
+  Rendered users/_form_new.html.erb (13.0ms)
+  Rendered users/new.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 141ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 05:09:04 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 173ms (Views: 165.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 05:09:04 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 177ms (Views: 165.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:09:13 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (9.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG.connect(ENV['my_database_development'])
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb__1639921212453284721_35968700'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:25:59 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (12.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PGconn.connect( "dbname=my_database_development password=GSmW0iYpwX")
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `initialize'
+app/views/cards/dmbexample.erb:2:in `new'
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___1770449668406582295_45406660'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:29:32 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (1.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app/app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+conn = PGconn.new(172.21.0.10, 5432, , , my_database_...
+                        ^
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+conn = PGconn.new(172.21.0.10, 5432, , , my_database_devel...
+                             ^
+/app/app/views/cards/dmbexample.erb:2: dynamic constant assignment
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='):
+  
+app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+app/views/cards/dmbexample.erb:2: dynamic constant assignment
+app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:29:58 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (1.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app/app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+conn = PGconn.new(172.21.0.10, 5432, my_database_deve...
+                        ^
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+conn = PGconn.new(172.21.0.10, 5432, my_database_developme...
+                             ^
+/app/app/views/cards/dmbexample.erb:2: dynamic constant assignment
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='):
+  
+app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+app/views/cards/dmbexample.erb:2: dynamic constant assignment
+app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:30:02 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app/app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+conn = PGconn.new(172.21.0.10, 5432, my_database_deve...
+                        ^
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+conn = PGconn.new(172.21.0.10, 5432, my_database_developme...
+                             ^
+/app/app/views/cards/dmbexample.erb:2: dynamic constant assignment
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='):
+  
+app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+app/views/cards/dmbexample.erb:2: dynamic constant assignment
+app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:40:12 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app/app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+conn = PGconn.new(172.21.0.10, 5432, nil, nil, my_dat...
+                        ^
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+conn = PGconn.new(172.21.0.10, 5432, nil, nil, my_database...
+                             ^
+/app/app/views/cards/dmbexample.erb:2: Can't assign to nil
+...onn.new(172.21.0.10, 5432, nil, nil, my_database_development...
+...                               ^
+/app/app/views/cards/dmbexample.erb:2: Can't assign to nil
+...ew(172.21.0.10, 5432, nil, nil, my_database_development, nan...
+...                               ^
+/app/app/views/cards/dmbexample.erb:2: dynamic constant assignment
+/app/app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='):
+  
+app/views/cards/dmbexample.erb:2: unexpected fraction part after numeric literal
+app/views/cards/dmbexample.erb:2: syntax error, unexpected tINTEGER, expecting ')'
+app/views/cards/dmbexample.erb:2: Can't assign to nil
+app/views/cards/dmbexample.erb:2: Can't assign to nil
+app/views/cards/dmbexample.erb:2: dynamic constant assignment
+app/views/cards/dmbexample.erb:2: syntax error, unexpected ')', expecting '='
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:41:13 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (2.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG::Connection.new
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `initialize'
+app/views/cards/dmbexample.erb:2:in `new'
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___2849969914325171031_29486400'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:45:48 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (10.7ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 1017ms (Views: 1014.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:46:52 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (6.1ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 177ms (Views: 175.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:47:56 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (6.5ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 151ms (Views: 148.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:47:58 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:48:08 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (3.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <%
+    2: conn = PG::Connection.new( :dbname => 'my_database_development', :host => ENV['DATA_DsssB_HOST'], :port => 5432, :user => 'nanobox', :password => 'GSmW0iYpwX' )
+    3: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    4: @pinnacleresult = pinnacle.getvalue(0,0)
+    5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:2:in `initialize'
+app/views/cards/dmbexample.erb:2:in `new'
+app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___2849969914325171031_69899905835100'
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:48:16 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (5.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:49:30 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.5ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 117ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:59:18 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (6.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 144ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 05:59:20 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 93ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (25.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "55555"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "55555"], ["LIMIT", 1]]
+  [1m[35mSQL (27.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "card_number", "team_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Example2"], ["email", "example@railstutorial.org"], ["created_at", "2018-02-18 17:03:04.386232"], ["updated_at", "2018-02-18 17:03:04.386232"], ["password_digest", "$2a$10$dwuhS6RtdGlpB9W1wacNo.VMxpek9ZQRqOzykECA.h2.en7NbmNAa"], ["activation_digest", "$2a$10$rEHqo6yGPqdad94nLYzz0eGO.xPFXbLJ/81NiP9BHNQ0JZc9clt/S"], ["card_number", "55555"], ["team_name", "VICE"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (6.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "55555"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "55555"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "66666"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "activated", "card_number", "team_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example2"], ["email", "takeitgraceful@gmail.com"], ["created_at", "2018-02-18 17:05:47.006091"], ["updated_at", "2018-02-18 17:05:47.006091"], ["password_digest", "$2a$10$L1nr8pSsAz5avpvzmjshSe5YrZxli0/F1dLGN7rzPYMXs0p8ZElai"], ["activation_digest", "$2a$10$H8BJ5VbCaG0iDMM5CC1JjOkK2UpToW0nnlW409n97RzDygMCDBWF."], ["activated", "t"], ["card_number", "66666"], ["team_name", "VICE"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:02:02 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 1083ms (Views: 1068.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:02:08 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 151ms (Views: 145.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:02:20 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jGAAcsPF1SntjdTMrqnvQSXtEiqzAbOzlnvPznHWR3dVZrtP/tWtPsay6l12JDSusV/vGq4RpfXN9Ox/gvfFQw==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 154ms (Views: 120.9ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:02:31 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lw2WKdh+ylYSbz3s2iZ2JqqOZqrg7ISDViMR2M11xhkTmH9xMXQ5kZAbTR/Tqkr98+dA8SNW28ipKCAtda2AnQ==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 142ms (Views: 133.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:11:29 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 146ms (Views: 142.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:11:32 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 109ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:11:42 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2re/aD2+/pP6RxvOH5jQo/dnwPPogAR6CjJMTCLFUWcDsQRVAK6GhNF4JV/HFQtMY9U9w/WQEjxRvW/90eTTUw==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 142ms (Views: 138.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:11:51 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vp/rWMJWEz5VetYolKdJQ1VIE86rs/Nficvko+vKdS86CgIAK1zg+dcOptudK3WYDCE1lWgJrBR2wNVWUxIzqw==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 113ms (Views: 107.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 17:11:58 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/_form_new.html.erb (111.6ms)
+  Rendered users/new.html.erb within layouts/application (115.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 263ms (Views: 221.8ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/users" for 172.21.255.254 at 2018-02-18 17:12:53 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WK7PXKj51TzU0JoyPo53+8KxjpnPoFPRVTXAH/X54nEd3EYJAZzdEi0uX30rr21vrgXVDHE062/cPWCRK6jZkw==", "user"=>{"name"=>"Example3", "email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "card_number"=>"555555", "team_name"=>"{:value=>\"VICE\", :checked=>true}"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "555555"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "card_number", "team_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Example3"], ["email", "takeitgraceful@gmail.com"], ["created_at", "2018-02-18 17:12:53.965561"], ["updated_at", "2018-02-18 17:12:53.965561"], ["password_digest", "$2a$10$gb9ofqfJ0YF.WocihTu9yO5TVpvr3vU7zwHdhu8fuG2XvubIDnv6K"], ["activation_digest", "$2a$10$EMxLuKMGV1djMNAhdtIAUuAXnTtvD/UVoWiBCZU1OZaIahFILnG8y"], ["card_number", "555555"], ["team_name", "{:value=>\"VICE\", :checked=>true}"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.5ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.8ms)
+UserMailer#account_activation: processed outbound mail in 228.0ms
+Sent mail to takeitgraceful@gmail.com (9.2ms)
+Date: Sun, 18 Feb 2018 17:12:54 +0000
+From: from@example.com
+To: takeitgraceful@gmail.com
+Message-ID: <5a89b41691cbc_431515a3084420@ab4b0a76d643.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a89b4168ffe4_431515a308431c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a89b4168ffe4_431515a308431c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Example3,
+
+Welcome to the home of Daniel Kraken! Click on the link below to activate your account:
+
+https://salty-reaches-15835.herokuapp.com/account_activations/xNpPmvhGrLAdGWXcPRlOYw/edit?email=takeitgraceful%40gmail.com
+
+
+----==_mimepart_5a89b4168ffe4_431515a308431c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+
+<p>Hi Example3,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
+<a href="https://salty-reaches-15835.herokuapp.com/account_activations/xNpPmvhGrLAdGWXcPRlOYw/edit?email=takeitgraceful%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5a89b4168ffe4_431515a308431c--
+
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.6ms)
+UserMailer#account_activation: processed outbound mail in 11.1ms
+Sent mail to takeitgraceful@gmail.com (2.6ms)
+Date: Sun, 18 Feb 2018 17:12:54 +0000
+From: from@example.com
+To: takeitgraceful@gmail.com
+Message-ID: <5a89b41695f45_431515a3084684@ab4b0a76d643.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a89b41694d5b_431515a308456f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a89b41694d5b_431515a308456f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Example3,
+
+Welcome to the home of Daniel Kraken! Click on the link below to activate your account:
+
+https://salty-reaches-15835.herokuapp.com/account_activations/xNpPmvhGrLAdGWXcPRlOYw/edit?email=takeitgraceful%40gmail.com
+
+
+----==_mimepart_5a89b41694d5b_431515a308456f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+
+<p>Hi Example3,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
+<a href="https://salty-reaches-15835.herokuapp.com/account_activations/xNpPmvhGrLAdGWXcPRlOYw/edit?email=takeitgraceful%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5a89b41694d5b_431515a308456f--
+
+Redirected to http://rails.local:3000/
+Completed 302 Found in 734ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:12:54 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 136ms (Views: 133.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:25:44 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 124ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:25:45 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZiFA+utWqG7DfmeVXKSiAL2thlh0n/glshATEfM0Zp2/J/vH1kbQeehBWQSEKXnvKR97aGmP7mPpnzCgABXkqQ==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+Redirected to http://rails.local:3000/
+Completed 302 Found in 74ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:25:45 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:26:48 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 151ms (Views: 140.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:26:50 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3cgYyBHu4bct6hLCnYDNkAj0USNCXyH9zcy/zMQa+9sEzqP1LP6ZoAbVLFNFDRZ/nEasE19PN7uWQ5x9Nzt57w==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+Redirected to http://rails.local:3000/
+Completed 302 Found in 68ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:26:50 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:27:31 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 164ms (Views: 161.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 17:27:33 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form_new.html.erb (13.0ms)
+  Rendered users/new.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 113ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.21.255.254 at 2018-02-18 17:28:01 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ftpKme50jJVUM90F2gILCwYGeSNWwOHnkeUZ/Z/NwXE7qMPMRxGEu63NGErPIxGfarIituhUWVkY7blzQZz6kw==", "user"=>{"name"=>"Jacob", "email"=>"mcmasterbigumjacob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "card_number"=>"77777", "team_name"=>"{:value=>\"PINNACLE\"}"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "mcmasterbigumjacob@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "77777"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "card_number", "team_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jacob"], ["email", "mcmasterbigumjacob@gmail.com"], ["created_at", "2018-02-18 17:28:01.473191"], ["updated_at", "2018-02-18 17:28:01.473191"], ["password_digest", "$2a$10$NZSMjPfk3uoyTY2TqH0PHe62uLCgFbufjQG6.97YnfFzomEqDdxpy"], ["activation_digest", "$2a$10$oTHPLHiK4N0LsuuCsqQ9V.xg5ZJzHWlHzqYJiRE1aqL4susbf2PAu"], ["card_number", "77777"], ["team_name", "{:value=>\"PINNACLE\"}"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.7ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (2.1ms)
+UserMailer#account_activation: processed outbound mail in 25.9ms
+Sent mail to mcmasterbigumjacob@gmail.com (2.7ms)
+Date: Sun, 18 Feb 2018 17:28:01 +0000
+From: from@example.com
+To: mcmasterbigumjacob@gmail.com
+Message-ID: <5a89b7a18bc9c_431515c608489f@ab4b0a76d643.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a89b7a18ac05_431515c608477d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a89b7a18ac05_431515c608477d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Jacob,
+
+Welcome to the home of Daniel Kraken! Click on the link below to activate your account:
+
+https://salty-reaches-15835.herokuapp.com/account_activations/CCxw1nQHpQWAM4ckMj1idg/edit?email=mcmasterbigumjacob%40gmail.com
+
+
+----==_mimepart_5a89b7a18ac05_431515c608477d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+
+<p>Hi Jacob,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
+<a href="https://salty-reaches-15835.herokuapp.com/account_activations/CCxw1nQHpQWAM4ckMj1idg/edit?email=mcmasterbigumjacob%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5a89b7a18ac05_431515c608477d--
+
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.3ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.2ms)
+UserMailer#account_activation: processed outbound mail in 13.2ms
+Sent mail to mcmasterbigumjacob@gmail.com (2.6ms)
+Date: Sun, 18 Feb 2018 17:28:01 +0000
+From: from@example.com
+To: mcmasterbigumjacob@gmail.com
+Message-ID: <5a89b7a191b67_431515c608503f@ab4b0a76d643.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a89b7a190ccb_431515c6084948";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a89b7a190ccb_431515c6084948
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Jacob,
+
+Welcome to the home of Daniel Kraken! Click on the link below to activate your account:
+
+https://salty-reaches-15835.herokuapp.com/account_activations/CCxw1nQHpQWAM4ckMj1idg/edit?email=mcmasterbigumjacob%40gmail.com
+
+
+----==_mimepart_5a89b7a190ccb_431515c6084948
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+
+<p>Hi Jacob,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
+<a href="https://salty-reaches-15835.herokuapp.com/account_activations/CCxw1nQHpQWAM4ckMj1idg/edit?email=mcmasterbigumjacob%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5a89b7a190ccb_431515c6084948--
+
+Redirected to http://rails.local:3000/
+Completed 302 Found in 210ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:28:01 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:40:13 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 160ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:40:18 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bRyvr8Crpo7E95JeQYFUvJqW1FR3mZFfm1bmoW3DtQe0GhSS/bveme/IrM+ZDI9TDiQpZGqJhxnA2cUQnuI3Mw==", "session"=>{"email"=>"takeitgraceful@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+Redirected to http://rails.local:3000/users/1
+Completed 302 Found in 89ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for 172.21.255.254 at 2018-02-18 17:40:18 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 109.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 172.21.255.254 at 2018-02-18 17:40:21 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 138ms (Views: 126.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:41:10 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 124ms (Views: 116.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:41:12 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 119ms (Views: 115.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 17:50:05 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.9ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 174ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:52:44 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 141ms (Views: 137.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for 172.21.255.254 at 2018-02-18 17:52:46 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t1137Uk4keWgJUqWWbIYv+s1XgiiYY5Av6nOltVw7rQzyJ61oDJiIiJROmVQPiRkslx4U2Hb0QtAov9jbaioMA=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://rails.local:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:52:46 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:52:48 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 147ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 17:52:57 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/_form_new.html.erb (17.6ms)
+  Rendered users/new.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 152ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.21.255.254 at 2018-02-18 17:53:34 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hET66tGq3ZhtKSNJWQ02JNixV+51j0YIZfKYm1sFc2TY5q+AiOjWJhKYcIwRS5M/9aeygdChaaon2rssz0uLw==", "user"=>{"name"=>"Example4", "email"=>"jmcmaste@erskine.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "card_number"=>"382266", "team_name"=>"{:value=>\"PINNACLE\"}"}, "commit"=>"Create my account"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "jmcmaste@erskine.edu"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" = $1 LIMIT $2[0m  [["card_number", "382266"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "card_number", "team_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Example4"], ["email", "jmcmaste@erskine.edu"], ["created_at", "2018-02-18 17:53:34.829148"], ["updated_at", "2018-02-18 17:53:34.829148"], ["password_digest", "$2a$10$R78PiQCYzN.MNWY/M5dTUOSwyyuHwIqhXpRYWHca73CmDE1fF7d7O"], ["activation_digest", "$2a$10$.54YEl8NHVkMymPiBQjxneTmAl0DwkP0qQw1IjY2bUF.PUXtGwqbO"], ["card_number", "382266"], ["team_name", "{:value=>\"PINNACLE\"}"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (2.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (1.1ms)
+UserMailer#account_activation: processed outbound mail in 27.1ms
+Sent mail to jmcmaste@erskine.edu (4.1ms)
+Date: Sun, 18 Feb 2018 17:53:34 +0000
+From: from@example.com
+To: jmcmaste@erskine.edu
+Message-ID: <5a89bd9ee6874_431515d50852eb@ab4b0a76d643.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a89bd9ee5c42_431515d508517a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a89bd9ee5c42_431515d508517a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Example4,
+
+Welcome to the home of Daniel Kraken! Click on the link below to activate your account:
+
+https://salty-reaches-15835.herokuapp.com/account_activations/2GGku8uznt1L4MYBPSc3pw/edit?email=jmcmaste%40erskine.edu
+
+
+----==_mimepart_5a89bd9ee5c42_431515d508517a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+
+<p>Hi Example4,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
+<a href="https://salty-reaches-15835.herokuapp.com/account_activations/2GGku8uznt1L4MYBPSc3pw/edit?email=jmcmaste%40erskine.edu">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5a89bd9ee5c42_431515d508517a--
+
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.7ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.4ms)
+UserMailer#account_activation: processed outbound mail in 10.2ms
+Sent mail to jmcmaste@erskine.edu (2.7ms)
+Date: Sun, 18 Feb 2018 17:53:34 +0000
+From: from@example.com
+To: jmcmaste@erskine.edu
+Message-ID: <5a89bd9eea9fc_431515d5085416@ab4b0a76d643.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5a89bd9eea141_431515d50853d5";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5a89bd9eea141_431515d50853d5
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Example4,
+
+Welcome to the home of Daniel Kraken! Click on the link below to activate your account:
+
+https://salty-reaches-15835.herokuapp.com/account_activations/2GGku8uznt1L4MYBPSc3pw/edit?email=jmcmaste%40erskine.edu
+
+
+----==_mimepart_5a89bd9eea141_431515d50853d5
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+
+<p>Hi Example4,</p>
+
+<p>
+Thank you for registering for DMB Loyalty! Click on the link below to activate your account:
+</p>
+
+<a href="https://salty-reaches-15835.herokuapp.com/account_activations/2GGku8uznt1L4MYBPSc3pw/edit?email=jmcmaste%40erskine.edu">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5a89bd9eea141_431515d50853d5--
+
+Redirected to http://rails.local:3000/
+Completed 302 Found in 213ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 17:53:34 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 100ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 17:53:54 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 142ms (Views: 133.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 17:54:02 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQxAp6X3wp1mqbOzjLwwnfKGHxOCHxFAYkrybtctRa/UCvuamOe6ik2WjSJUMetyZjTiI58PBwY5xdHfJAzHmw==", "session"=>{"email"=>"jmcmaste@erskine.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jmcmaste@erskine.edu"], ["LIMIT", 1]]
+Redirected to http://rails.local:3000/users/3
+Completed 302 Found in 77ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 172.21.255.254 at 2018-02-18 17:54:02 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 106ms (Views: 99.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 18:08:41 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 180ms (Views: 168.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 172.21.255.254 at 2018-02-18 18:08:42 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 131ms (Views: 123.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 18:08:52 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (6.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 18:09:27 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (10.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 122ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 18:09:30 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (12.7ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 100ms (Views: 96.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 18:11:04 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 126ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 18:27:19 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (11.9ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 19:20:31 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (15.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 138ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 19:49:11 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (9.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 139ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 172.21.255.254 at 2018-02-18 19:49:13 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 102ms (Views: 92.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 172.21.255.254 at 2018-02-18 19:49:15 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (7.2ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 98ms (Views: 90.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 19:49:45 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (128.6ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1213ms (Views: 1190.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 19:49:57 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (8.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 169ms (Views: 166.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 19:50:22 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (8.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 135ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 19:50:25 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (21.6ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 136ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 20:03:29 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.2ms)
+  Rendered layouts/_shim.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 989ms (Views: 978.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 20:03:33 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (15.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 167ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 20:17:21 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (7.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 173ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+

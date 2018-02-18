@@ -4,7 +4,7 @@ require 'pg'
 require 'active_support'
 require 'active_support/core_ext'
 
-conn = PG.connect(ENV['DATABASE_URL'])
+conn = PG::Connection.new( :dbname => 'my_database_development', :host => ENV['DATA_DB_HOST'], :port => 5432, :user => ENV['DATA_DB_USER'], :password => ENV['DATA_DB_PASS'] )
 
 open("dmbloyalty.html") do |file|
   file.seek(0, IO::SEEK_END) # rewinds file to the end
