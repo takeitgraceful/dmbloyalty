@@ -1,13 +1,33 @@
 run.config:
   engine: ruby
+
   extra_packages:
     - nodejs
+    - pkgconf
+    - libxml2
+    - libxslt
+    - nginx
 
-web.site:
-  start: bundle exec puma -C config/puma.rb
+
+web.main:
+  start:
+    nginx: nginx -c /app/config/nginx.conf
+    puma: bundle exec puma -C /app/config/puma.rb
+  writable_dirs:
+    - tmp
+    - log
 
 data.db:
   image: nanobox/postgresql:9.6
+
+
+deploy.config:
+  extra_steps:
+    - rake assets:precompile RAILS_ENV=production
+  before_live:
+    web.main:
+      - rake db:setup_or_migrate
+
 
 
 #data.redis:

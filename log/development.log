@@ -17532,3 +17532,1004 @@ ActionView::Template::Error (FATAL:  database "jacobmcmaster-bigum" does not exi
     5: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
   
 app/views/cards/dmbexample.erb:2:in `_app_views_cards_dmbexample_erb___4032310501639292604_70322607232040'
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (24.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180204014821)[0m
+  [1m[35m (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170925085408),
+(20170926074133),
+(20170926080206),
+(20171004045655),
+(20171008213325),
+(20171009053653),
+(20171015010256),
+(20171124202440),
+(20171225040801),
+(20180101023641);
+
+[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-18 02:31:01.725603"], ["updated_at", "2018-02-18 02:31:01.725603"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180204014821)[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170925085408),
+(20170926074133),
+(20170926080206),
+(20171004045655),
+(20171008213325),
+(20171009053653),
+(20171015010256),
+(20171124202440),
+(20171225040801),
+(20180101023641);
+
+[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-18 02:31:01.837228"], ["updated_at", "2018-02-18 02:31:01.837228"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (5.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:02:03 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 11418ms (Views: 11398.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:02:22 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 143ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 03:02:23 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (45.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 221ms (Views: 190.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 03:02:41 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (11.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <!--
+    2: <%
+    3: conn = PG.connect(ENV['DATABASE_URL'])
+    4: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    5: @pinnacleresult = pinnacle.getvalue(0,0)
+    6: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:3:in `_app_views_cards_dmbexample_erb__2928995871091187643_70072466630100'
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (2.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (27.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 03:07:30 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `listener' for #<UsersController:0x0000000004156360>):
+  
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:198:in `block in halting'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:20:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:07:45 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 851ms (Views: 844.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:07:48 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (3.8ms)
+Completed 200 OK in 128ms (Views: 124.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 03:07:49 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 142ms (Views: 134.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.255.254 at 2018-02-18 03:07:51 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"024SknjkTdbkWUC2Zk5NGPKMqpoJ2PTgjbzv3gFXIKsKaKmvRfQ1wc9mfie+w5b3Zj5XqhTI4qbWM8xv8nainw==", "session"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 161ms (Views: 137.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 03:07:53 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `listener' for #<UsersController:0x00007fb36190fcd8>):
+  
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:198:in `block in halting'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:20:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 172.21.255.254 at 2018-02-18 03:08:00 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 129ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:09:26 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 157ms (Views: 150.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 172.21.255.254 at 2018-02-18 03:09:32 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `listener' for #<UsersController:0x00007fb36135f888>):
+  
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:198:in `block in halting'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/bundle/ruby/2.3.0/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:20:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/ruby/2.3.0/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.3.0/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/ruby/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/ruby/2.3.0/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/ruby/2.3.0/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:605:in `handle_request'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:437:in `process_client'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/server.rb:301:in `block in run'
+vendor/bundle/ruby/2.3.0/gems/puma-3.10.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:11:18 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 134ms (Views: 128.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:11:21 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 97ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 03:11:22 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 129ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 172.21.255.254 at 2018-02-18 03:11:24 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 111ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for 172.21.255.254 at 2018-02-18 03:11:28 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rjm59hx0z8q3KfXSC6tUr+JxPGhDLXfoLPTK4U4UCgSCZ2xCOK8XMdiUKByZnwmGahRXvHM01EaLc76QSROyXg==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 116ms (Views: 112.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:11:31 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 111ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5068.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_database_development"[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (113.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_database_development"[0m
+  [1m[35m (112.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_database_test"[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20170925085408)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170925085408"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexToUsersEmail (20170926074133)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170926074133"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPasswordDigestToUsers (20170926080206)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170926080206"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRememberDigestToUsers (20171004045655)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_digest" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171004045655"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAdminToUsers (20171008213325)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.1ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171008213325"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddActivationToUsers (20171009053653)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "activation_digest" character varying[0m
+  [1m[35m (8.5ms)[0m  [1m[35mALTER TABLE "users" ADD "activated" boolean DEFAULT 'f'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "activated_at" timestamp[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171009053653"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddResetToUsers (20171015010256)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_digest" character varying[0m
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_sent_at" timestamp[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171015010256"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCharacterInfoToUsers (20171124202440)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "characterfirstname" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "characterlastname" character varying[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171124202440"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCharacterseason (20171225040801)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171225040801"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CardNumberAndTeamName (20180101023641)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "card_number" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "team_name" character varying[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180101023641"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCards (20180204014821)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180204014821"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-18 03:27:02.008068"], ["updated_at", "2018-02-18 03:27:02.008068"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (5.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/login" for 172.21.255.254 at 2018-02-18 03:51:26 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (36.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 898ms (Views: 878.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:51:37 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 172ms (Views: 157.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:53:05 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:53:06 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 108ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:53:08 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:58:56 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 161ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.255.254 at 2018-02-18 03:58:58 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (4.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (2.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (21.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (49.5ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180204014821)[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170925085408),
+(20170926074133),
+(20170926080206),
+(20171004045655),
+(20171008213325),
+(20171009053653),
+(20171015010256),
+(20171124202440),
+(20171225040801),
+(20180101023641);
+
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-18 04:02:18.565353"], ["updated_at", "2018-02-18 04:02:18.565353"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "takeitgraceful@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."card_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "card_used" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "remember_digest" character varying, "admin" boolean DEFAULT 'f', "activation_digest" character varying, "activated" boolean DEFAULT 'f', "activated_at" timestamp, "reset_digest" character varying, "reset_sent_at" timestamp, "characterfirstname" character varying, "characterlastname" character varying, "card_number" character varying, "team_name" character varying)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/dmbexample" for 172.21.255.254 at 2018-02-18 04:18:23 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CardsController#dmbexample as HTML
+  Rendering cards/dmbexample.erb within layouts/admin
+  Rendered cards/dmbexample.erb within layouts/admin (9.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+    1: <!--
+    2: <%
+    3: conn = PG.connect(ENV['DATABASE_URL'])
+    4: pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
+    5: @pinnacleresult = pinnacle.getvalue(0,0)
+    6: vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
+  
+app/views/cards/dmbexample.erb:3:in `_app_views_cards_dmbexample_erb__971361624142910339_70018049230500'
+Started GET "/" for 172.21.255.254 at 2018-02-18 04:18:52 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 161ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.21.255.254 at 2018-02-18 04:18:53 +0000
+Cannot render console from 172.21.255.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 106ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+

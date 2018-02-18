@@ -6,15 +6,19 @@ development:
   host: <%= ENV['DATA_DB_HOST'] %>
   username: <%= ENV['DATA_DB_USER'] %>
   password: <%= ENV['DATA_DB_PASS'] %>
+  port: 5432
+
 
 test:
   adapter: postgresql
   database: my_database_test
   pool: 5
   timeout: 5000
-    host: <%= ENV['DATA_DB_HOST'] %>
+  host: <%= ENV['DATA_DB_HOST'] %>
   username: <%= ENV['DATA_DB_USER'] %>
   password: <%= ENV['DATA_DB_PASS'] %>
+  port: 5432
+
 
 production:
   adapter: postgresql
@@ -24,3 +28,4 @@ production:
   host: <%= ENV['DATA_DB_HOST'] %>
   username: <%= ENV['DATA_DB_USER'] %>
   password: <%= ENV['DATA_DB_PASS'] %>
+  port: 5432
