@@ -1,0 +1,14 @@
+run.config:
+  engine: ruby
+  extra_packages:
+    - nodejs
+
+web.site:
+  start: bundle exec puma -C config/puma.rb
+
+data.db:
+  image: nanobox/postgresql:9.6
+
+
+#data.redis:
+#image: nanobox/redis:3.0
