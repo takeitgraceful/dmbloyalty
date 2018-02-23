@@ -1,6 +1,6 @@
+require 'rubygems'
 require 'socket'
 require 'nokogiri'
-require 'rubygems'
 
 server = TCPServer.new 4444
 html        = File.open("dmbloyalty.html")

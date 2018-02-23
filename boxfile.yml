@@ -1,13 +1,21 @@
 run.config:
   engine: ruby
+  engine.config:
+    runtime: ruby-2.2
+  cache_dirs:
+    - .bundle
+
+  build_triggers:
+    - Gemfile
+    - Gemfile.lock
 
   extra_packages:
-    - nodejs
     - pkgconf
     - libxml2
     - libxslt
+    - nodejs
     - nginx
-
+    - zlib
 
 web.main:
   start:
@@ -20,15 +28,12 @@ web.main:
 data.db:
   image: nanobox/postgresql:9.6
 
-
 deploy.config:
   extra_steps:
-    - rake assets:precompile RAILS_ENV=production
+    - bundle exec rake assets:precompile RAILS_ENV=production
   before_live:
     web.main:
-      - rake db:setup_or_migrate
-
-
+      - bundle exec rake db:setup_or_migrate
 
 #data.redis:
-#image: nanobox/redis:3.0
+#  image: nanobox/redis:3.0
