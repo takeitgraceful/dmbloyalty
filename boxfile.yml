@@ -24,6 +24,8 @@ web.main:
   writable_dirs:
     - tmp
     - log
+  ports:
+    - tcp:4444:4444
 
 data.db:
   image: nanobox/postgresql:9.6
