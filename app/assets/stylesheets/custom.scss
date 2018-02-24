@@ -195,7 +195,7 @@ footer ul li {
 
 .login-big
 {
-    font-size: 2em;
+    font-size: 3em;
     color:white;
     font-family: 'Roboto', sans-serif;
 }
@@ -269,4 +269,8 @@ height: 100%;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+}
+
+.center-me {
+  margin: 0 auto;
 }

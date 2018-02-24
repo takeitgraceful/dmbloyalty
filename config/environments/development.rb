@@ -1,4 +1,19 @@
 Rails.application.configure do
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+    host = 'dmbloyalty.nanoapp.io'
+    config.action_mailer.default_url_options = { host: host }
+    ActionMailer::Base.smtp_settings = {
+      :user_name => 'takeitgraceful',
+      :password => 'penchant435',
+      :domain => 'dmbloyalty.nanoapp.io',
+      :address => 'smtp.sendgrid.net',
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+
+    }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -53,9 +68,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
-  host = 'salty-reaches-15835.herokuapp.com' # Don't use this literally; use your local dev host instead
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
 end
