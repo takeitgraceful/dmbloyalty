@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'DMB Loyalty'
+  default from: 'webmaster@dmbloyalty.com'
   layout 'mailer'
 end
