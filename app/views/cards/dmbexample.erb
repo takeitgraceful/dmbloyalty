@@ -7,6 +7,10 @@ vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_num
 %>
 
 <div class= "coffees">
-<%=@pinnacleresult %>
-<%=@viceresult %>>
+<div class="bottom-right-vice">
+<div class="viceresult">
+<%=@viceresult %>
+</div>
+<%= image_tag 'vice_icon_1.svg'%>
+</div>
 </div>

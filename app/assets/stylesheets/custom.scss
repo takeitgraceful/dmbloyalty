@@ -292,3 +292,21 @@ background-size: cover;
   width: 50%;
 
 }
+
+.bottom-right-vice {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+.viceresult {
+  position: absolute;
+  top: -25%;
+  left: 40%;
+  font-family: 'Roboto';
+  font-size:8em;
+  color:#ED2991;
+}
