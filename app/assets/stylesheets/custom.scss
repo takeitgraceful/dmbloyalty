@@ -299,6 +299,12 @@ background-size: cover;
   bottom: 0px;
 }
 
+.bottom-right-pinnacle {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 
@@ -309,4 +315,21 @@ background-size: cover;
   font-family: 'Roboto';
   font-size:8em;
   color:#ED2991;
+}
+
+.pinnacleresult {
+  position: absolute;
+  top: -25%;
+  left: 40%;
+  font-family: 'Roboto';
+  font-size:8em;
+  color:#ffffff;
+}
+
+
+.some-class {
+  margin: 0 auto;
+  fill: #ffffff;
+  width: 20em;
+  height: 20em;
 }

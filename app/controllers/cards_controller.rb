@@ -2,6 +2,12 @@ class CardsController < ApplicationController
   layout "admin"
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
+
+  def whatever_view_this_is
+    @home_banner  = true
+  end
+
+
   # GET /cards
   # GET /cards.json
   def index

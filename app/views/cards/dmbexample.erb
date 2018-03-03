@@ -1,16 +1,29 @@
 <%
 conn = PG::Connection.new( :dbname => 'my_database_development', :host => ENV['DATA_DB_HOST'], :port => 5432, :user => ENV['DATA_DB_USER'], :password => ENV['DATA_DB_PASS'] )
 pinnacle = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%PINNACLE%' ;")
-@pinnacleresult = pinnacle.getvalue(0,0)
+@pinnacleresult = pinnacle.getvalue(0,0).to_i
 vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_number = cards.card_used AND users.team_name like '%VICE%' ;")
-@viceresult = vice.getvalue(0,0)
+@viceresult = vice.getvalue(0,0).to_i
 %>
 
 <div class= "coffees">
-<div class="bottom-right-vice">
-<div class="viceresult">
-<%=@viceresult %>
+<% if @pinnacleresult > @viceresult %>
+<div class="bottom-right-pinnacle">
+<div class="pinnacleresult">
+<%=@pinnacleresult %>
 </div>
-<%= image_tag 'vice_icon_1.svg'%>
+<%= inline_svg("pinnacle_icon_1.svg", class: 'some-class') %>
 </div>
+<% end %>
+
+<% if @viceresult > @pinnacleresult %>
+  <div class="bottom-right-vice">
+  <div class="viceresult">
+  <%=@viceresult %>
+  </div>
+  <%= inline_svg("vice_icon_1.svg", class: 'some-class') %>
+  </div>
+<% end %>
+
+
 </div>
