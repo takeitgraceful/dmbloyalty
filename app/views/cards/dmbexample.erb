@@ -6,7 +6,15 @@ vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_num
 @viceresult = vice.getvalue(0,0).to_i
 %>
 
+<%= javascript_tag do %>
+setInterval("my_function();",5000);
+function my_function(){
+  $('#refresher').load(location.href + ' #refresher');
+}
+<% end %>
+
 <div class= "coffees">
+<div id="refresher">
 <% if @pinnacleresult > @viceresult %>
 <div class="bottom-right-pinnacle">
 <div class="pinnacleresult">
@@ -24,6 +32,5 @@ vice = conn.exec("SELECT COUNT(team_name) from cards, users WHERE users.card_num
   <%= inline_svg("vice_icon_1.svg", class: 'some-class') %>
   </div>
 <% end %>
-
-
+</div>
 </div>
