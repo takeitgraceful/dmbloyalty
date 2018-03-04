@@ -3,11 +3,6 @@ class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
 
-  def whatever_view_this_is
-    @home_banner  = true
-  end
-
-
   # GET /cards
   # GET /cards.json
   def index

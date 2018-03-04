@@ -32,5 +32,15 @@ function my_function(){
   <%= inline_svg("vice_icon_1.svg", class: 'some-class') %>
   </div>
 <% end %>
+
+<% if @viceresult == @pinnacleresult %>
+  <div class="bottom-right-vice">
+  <div class="viceresult-white">
+  <%=@viceresult %>
+  </div>
+  <%= inline_svg("tie_icon.svg", class: 'some-class') %>
+  </div>
+<% end %>
+
 </div>
 </div>
