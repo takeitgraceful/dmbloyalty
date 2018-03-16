@@ -16,7 +16,14 @@ function my_function(){
 <div class= "coffees">
 <div id="refresher">
 <% if @pinnacleresult > @viceresult %>
+
 <div class="bottom-right-pinnacle">
+<div class="subduedviceresult">
+<%=@viceresult %>
+</div>
+<div class="subduedvice">
+VICE
+</div>
 <div class="pinnacleresult">
 <%=@pinnacleresult %>
 </div>
@@ -26,6 +33,12 @@ function my_function(){
 
 <% if @viceresult > @pinnacleresult %>
   <div class="bottom-right-vice">
+    <div class="subduedpinnacleresult">
+    <%=@pinnacleresult %>
+    </div>
+    <div class="subduedvice">
+    PINNACLE
+    </div>
   <div class="viceresult">
   <%=@viceresult %>
   </div>

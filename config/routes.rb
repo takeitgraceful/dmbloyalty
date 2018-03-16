@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
 
   root 'static_pages#home'
-  get  '/dmbexample', to: 'cards#dmbexample'  
+  get  '/dmbexample', to: 'cards#dmbexample'
+  get  '/dmbexample2', to: 'cards#dmbexample2'  
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
